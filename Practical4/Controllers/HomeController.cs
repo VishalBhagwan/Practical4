@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Practical4.Controllers
+namespace Practical2.Controllers
 {
     public class HomeController : Controller
     {

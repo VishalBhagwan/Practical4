@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Callum Molver</title>
+    <link rel="stylesheet" href="../Content/PersonStyle.css">
+</head>
+<body>
+    <h1>Person 2 - Callum Molver</h1>
+    <nav>
+        <a href="../Home/Index">MAIN</a> |
+        <a href="../Group/ListGroup">LIST</a> |
+        <a href="../HTML/Person1.html">Person 1</a>
+        <a href="../HTML/Person2.html">Person 2</a>
+        <a href="../HTML/Person3.html">Person 3</a>
+        <a href="../HTML/Person4.html">Person 4</a>
+        <a href="../HTML/Person5.html">Person 5</a>
+        <a href="javascript:history.back()">Back</a>
+    </nav>
+
+    <section>
+        <h2>Biography and Background</h2>
+        <div class="background">
+            <img src="Images/hawkeye.jpg" class="flip-img">
+            <p>
+                Callum Molver was born and raised in Pretoria. He is studying Bcom(Informatics) with an elective of Business.
+                He however, wishes to work in a field where he would work closely with databases and coding.
+            </p>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+            <p>
+                Callum curently has an interest in crypto and investing. He also has been doing calisthenics.
+            </p>
+            <img src="Images/calis.jpg" class="flip-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Modules</h2>
+        <div class="modules">
+            <p>1st and 2nd Semester modules</p>
+            <table>
+                <tr>
+                    <th>Semester 1</th>
+                    <th>Semester 2</th>
+                </tr>
+                <tr>
+
+                    <td>INF370</td>
+                    <td>STK353</td>
+                </tr>
+                <tr>
+                    <td>OBS310</td>
+                    <td>OBS320</td>
+                </tr>
+                <tr>
+                    <td>OBS210</td>
+                    <td>INF371</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop();
+
+            let navLinks = document.querySelectorAll("nav a");
+
+            navLinks.forEach(link => {
+                let linkPage = link.getAttribute("href").split("/").pop();
+
+                if (linkPage === currentPage) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

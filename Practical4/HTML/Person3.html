@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Pranavan Naidoo</title>
+    <link rel="stylesheet" href="../Content/PersonStyle.css">
+</head>
+<body>
+    <h1>Person 3 - Pranavan Naidoo</h1>
+    <nav>
+        <a href="../Home/Index">MAIN</a> |
+        <a href="../Group/ListGroup">LIST</a> |
+        <a href="../HTML/Person1.html">Person 1</a>
+        <a href="../HTML/Person2.html">Person 2</a>
+        <a href="../HTML/Person3.html">Person 3</a>
+        <a href="../HTML/Person4.html">Person 4</a>
+        <a href="../HTML/Person5.html">Person 5</a>
+        <a href="javascript:history.back()">Back</a>
+    </nav>
+
+    <section>
+        <h2>Biography and Background</h2>
+        <div class="background">
+            <img src="Images/tony-stark-iron-man.jpg" class="flip-img">
+            <p>
+                Pranavan Naidoo was born in Durban, yet has spent most of his life in Gauteng. He is studying Financial Sciences, with electives
+                such as accounting, auditing and tax. He is unsure which path to go down, which is why he has chosen a few electives.
+            </p>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+            <p>
+                Pranvan enjoys listening to various genres of music as well as working on his editing skills.
+            </p>
+            <img src="Images/music.jpg" class="flip-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Modules</h2>
+        <div class="modules">
+            <p>1st and 2nd Semester modules</p>
+            <table>
+                <tr>
+                    <th>Semester 1</th>
+                    <th>Semester 2</th>
+                </tr>
+                <tr>
+                    <td>FIL251</td>
+                    <td>IAU310</td>
+                </tr>
+                <tr>
+                    <td>BAC300</td>
+                    <td>BAC300</td>
+                </tr>
+                <tr>
+                    <td>BEL347</td>
+                    <td>FBS370</td>
+                </tr>
+            </table>
+        </div>
+
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop();
+
+            let navLinks = document.querySelectorAll("nav a");
+
+            navLinks.forEach(link => {
+                let linkPage = link.getAttribute("href").split("/").pop();
+
+                if (linkPage === currentPage) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Maya Pillay</title>
+    <link rel="stylesheet" href="../Content/PersonStyle.css">
+</head>
+<body>
+    <h1>Person 4 - Maya Pillay</h1>
+    <nav>
+        <a href="../Home/Index">MAIN</a> |
+        <a href="../Group/ListGroup">LIST</a> |
+        <a href="../HTML/Person1.html">Person 1</a>
+        <a href="../HTML/Person2.html">Person 2</a>
+        <a href="../HTML/Person3.html">Person 3</a>
+        <a href="../HTML/Person4.html">Person 4</a>
+        <a href="../HTML/Person5.html">Person 5</a>
+        <a href="javascript:history.back()">Back</a>
+    </nav>
+
+    <section>
+        <h2>Biography and Background</h2>
+        <div class="background">
+            <img src="Images/Wanda-Scarlet-Witch-Cropped.jpg" class="flip-img">
+            <p>
+                Maya Pillay was born in Sunninghill, and has lived in the area ever since. She is currently studying Bcom(Law) with an elective in accounting.
+                She has chosen this path in order to work for a corporate firm and practice law.
+            </p>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+            <p>
+                Maya enjoys reading, and has more recently, taken an interest to cricket.
+            </p>
+            <img src="Images/reading.jpg" class="flip-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Modules</h2>
+        <div class="modules">
+            <p>1st and 2nd Semester modules</p>
+            <table>
+                <tr>
+                    <th>Semester 1</th>
+                    <th>Semester 2</th>
+                </tr>
+                <tr>
+                    <td>BAC300</td>
+                    <td>BAC300</td>
+                </tr>
+                <tr>
+                    <td>SAR310</td>
+                    <td>ISR310</td>
+                </tr>
+                <tr>
+                    <td>BEL310</td>
+                    <td>ISR374</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop();
+
+            let navLinks = document.querySelectorAll("nav a");
+
+            navLinks.forEach(link => {
+                let linkPage = link.getAttribute("href").split("/").pop();
+
+                if (linkPage === currentPage) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

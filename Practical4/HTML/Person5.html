@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mahilan Naicker</title>
+    <link rel="stylesheet" href="../Content/PersonStyle.css">
+</head>
+<body>
+    <h1>Person 5 - Mahilan Naicker</h1>
+    <nav>
+        <a href="../Home/Index">MAIN</a> |
+        <a href="../Group/ListGroup">LIST</a> |
+        <a href="../HTML/Person1.html">Person 1</a>
+        <a href="../HTML/Person2.html">Person 2</a>
+        <a href="../HTML/Person3.html">Person 3</a>
+        <a href="../HTML/Person4.html">Person 4</a>
+        <a href="../HTML/Person5.html">Person 5</a>
+        <a href="javascript:history.back()">Back</a>
+    </nav>
+
+    <section>
+        <h2>Biography and Background</h2>
+        <div class="background">
+            <img src="Images/thor-lightning.jpg" class="flip-img">
+            <p>
+                Mahilan Naicker was born near Sandton, while attending a school in Rosebank. He is studying LLB(Law) with hopes to practice law
+                although, he is unsure which field he will go into.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+            <p>
+                Mahilan enjoys playing and watching football, especially Ronaldo. He also enjoys going to the gym regularly.
+            </p>
+            <img src="Images/gym.jpg" class="flip-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Modules</h2>
+        <div class="modules">
+            <p>1st and 2nd Semester modules</p>
+            <table>
+                <tr>
+                    <th>Semester 1</th>
+                    <th>Semester 2</th>
+                </tr>
+                <tr>
+                    <td>SAR310</td>
+                    <td>TXA380</td>
+                </tr>
+                <tr>
+                    <td>ISR310</td>
+                    <td>JUR346</td>
+                </tr>
+                <tr>
+                    <td>ROM359</td>
+                    <td>LSR361</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let currentPage = window.location.pathname.split("/").pop();
+
+        let navLinks = document.querySelectorAll("nav a");
+
+        navLinks.forEach(link => {
+            let linkPage = link.getAttribute("href").split("/").pop();
+
+            if (linkPage === currentPage) {
+                link.classList.add("active");
+            } else {
+                link.classList.remove("active");
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Vishal Bhagwan</title>
+    <link rel="stylesheet" href="../Content/PersonStyle.css">
+</head>
+<body>
+    <h1>Person 1 - Vishal Bhagwan</h1>
+    <nav>
+        <a href="../Home/Index">MAIN</a> |
+        <a href="../Group/ListGroup">LIST</a> |
+        <a href="../HTML/Person1.html">Person 1</a>
+        <a href="../HTML/Person2.html">Person 2</a>
+        <a href="../HTML/Person3.html">Person 3</a>
+        <a href="../HTML/Person4.html">Person 4</a>
+        <a href="../HTML/Person5.html">Person 5</a>
+        <a href="javascript:history.back()">Back</a>
+    </nav>
+
+    <section>
+        <h2>Biography and Background</h2>
+        <div class="background">
+            <img src="Images/DP.jpg" class="flip-img">
+            <p>
+                I was born in Port Elizabeth, Eastern Cape, but moved to gauteng when he was 1. I study BIT(Information Systems) with Statistics as an
+                elective in order to have a career in Data Science.
+            </p>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+            <p>
+                I enjoy playing video games and reading. I do also enjoy watching football, and playing occasionaly when I have the chance.
+            </p>
+            <img src="Images/games.jpg" class="flip-img">
+        </div>
+    </section>
+
+    <section>
+        <h2>Modules</h2>
+        <div class="modules">
+            <p>1st and 2nd Semester modules</p>
+            <table>
+                <tr>
+                    <th>Semester 1</th>
+                    <th>Semester 2</th>
+                </tr>
+                <tr>
+                    <td>STK310</td>
+                    <td>STK320</td>
+                </tr>
+                <tr>
+                    <td>INF214</td>
+                    <td>INF261</td>
+                </tr>
+                <tr>
+                    <td>INF272</td>
+                    <td>INF271</td>
+                </tr>
+                <tr>
+                    <td>FIL251</td>
+                    <td>STK353</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let currentPage = window.location.pathname.split("/").pop();
+
+            let navLinks = document.querySelectorAll("nav a");
+
+            navLinks.forEach(link => {
+                let linkPage = link.getAttribute("href").split("/").pop();
+
+                if (linkPage === currentPage) {
+                    link.classList.add("active");
+                } else {
+                    link.classList.remove("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
