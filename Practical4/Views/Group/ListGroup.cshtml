@@ -25,6 +25,9 @@
         <th>
             @Html.DisplayNameFor(model => model.myLink)
         </th>
+        <th>
+            Delete
+        </th>
     </tr>
 
     @foreach (var item in Model)
@@ -45,8 +48,30 @@
             <td>
                 <a href="@item.myLink" class="btn btn-primary">LINK</a>
             </td>
+            <td>
+                <button class="btn btn-danger" onclick="removeRow(this)">Delete</button>
+            </td>
         </tr>
     }
 
 </table>
 
+<script>
+    //Delete
+    function removeRow(e) {
+        e.parentElement.parentElement.remove();
+    }
+
+
+    //Highlight
+    document.addEventListener("DOMContentLoaded", () => {
+        const rows = document.querySelectorAll("table tr");
+        rows.forEach((row, index) => {
+            if (index === 0) return;
+            const firstName = row.cells[1].innerText.trim();
+            if (firstName.startsWith("M")) {
+                row.style.color = "red";
+            }
+        });
+    });
+</script>
