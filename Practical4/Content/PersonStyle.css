@@ -112,3 +112,9 @@ table {
     table th, table td {
         text-align: center;
     }
+
+section {
+    min-height: 250px; 
+}
+
+    
