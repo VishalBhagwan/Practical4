@@ -1,0 +1,114 @@
+﻿/*People's Pages Style*/
+body {
+    background-color: lightskyblue;
+}
+
+/*Navigation Bar*/
+nav {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    font-style: unset;
+}
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 5px 5px;
+        border-right: 1px solid white;
+    }
+
+        nav a:hover {
+            background-color: dimgrey;
+        }
+
+        nav a:last-child {
+            border-right: none;
+        }
+
+        nav a.active {
+            background-color: blue;
+            color: white;
+        }
+
+/*Content*/
+section {
+    border: 2px solid blue;
+    padding: 15px;
+    margin: 15px 0;
+    background-color: white;
+}
+
+    section h2 {
+        text-align: Left;
+        margin-top: auto;
+    }
+
+/*Background*/
+.background {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+    .background p {
+        margin-top: 5px;
+    }
+
+    .background img {
+        width: 150px;
+        height: auto;
+        object-fit: cover;
+        margin-right: 15px;
+        transition: transform 0.5s;
+    }
+
+        .background img:hover {
+            transform: scaleX(-1);
+        }
+
+/*Hobbies*/
+.hobbies {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+    .hobbies p {
+        margin-top: 5px;
+    }
+
+    .hobbies img {
+        width: 150px;
+        height: auto;
+        object-fit: cover;
+        margin-left: auto;
+        transition: transform 0.5s;
+    }
+
+        .hobbies img:hover {
+            transform: scaleX(-1);
+        }
+
+/*Flip Image*/
+.flip-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+    .flip-img:hover {
+        transform: scaleX(-1);
+    }
+
+/*Module*/
+table {
+    width: 50%;
+    margin-top: 5px;
+}
+
+    table th, table td {
+        text-align: center;
+    }
